@@ -4,11 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` / `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` / `npm run start-app` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Run `npm run start-api` for a dev api test. Navigate to `http://localhost:3000/api`.
 
-Run `npm run start-app` for a run full mean app. Navigate to `http://localhost:3000/`. 
+Run `npm run start` for a run full mean app. Navigate to `http://localhost:3000/`. 
 
 ## Code scaffolding
 
