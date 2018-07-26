@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node ./src/bin/www",
-    "serve": "ng serve",
-    "api-server": "node ./src/bin/www",
+    "start": "ng serve",
+    "start-api": "node ./src/bin/www",
+    "start-app": "ng build && node ./src/bin/www",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
