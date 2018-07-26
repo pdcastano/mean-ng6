@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
-import { ApiService } from '../services/api/api.service';
+import { BooksService } from '../services/books/books.service';
 
 @Component({
   selector: 'app-book',
@@ -15,7 +15,7 @@ export class BookComponent implements OnInit {
   displayedColumns = ['isbn', 'title', 'author'];
   dataSource = new BookDataSource(this.api);
 
-  constructor(private api:ApiService) { }
+  constructor(private api:BooksService) { }
   
   ngOnInit() {
     this.api.getBooks()
@@ -31,7 +31,7 @@ export class BookComponent implements OnInit {
 
 //Angular Material Data Source 
 export class BookDataSource extends DataSource<any> {
-  constructor(private api: ApiService) {
+  constructor(private api: BooksService) {
     super()
   }
 

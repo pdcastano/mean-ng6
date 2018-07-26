@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ApiService } from '../services/api/api.service';
+import { BooksService } from '../services/books/books.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({
@@ -22,7 +22,7 @@ export class BookEditComponent implements OnInit {
   constructor(
     private router: Router, 
     private route: ActivatedRoute, 
-    private api: ApiService, 
+    private api: BooksService, 
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {

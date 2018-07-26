@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiService } from '../services/api/api.service';
+import { BooksService } from '../services/books/books.service';
 import { 
   FormControl, 
   FormGroupDirective, 
@@ -26,7 +26,7 @@ export class BookCreateComponent implements OnInit {
 
   constructor(
     private router: Router, 
-    private api: ApiService, 
+    private api: BooksService, 
     private formBuilder: FormBuilder) { }
 
   ngOnInit() {

@@ -4,11 +4,12 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-var apiRouter = require('./routes/book');
+var booksRouter = require('./routes/book');
 
 var dbUser = 'pedropdc';
 var dbPass = 'papucho312';
 var dbConnectionString = `mongodb://${dbUser}:${dbPass}@ds253891.mlab.com:53891/books`;
+
 var staticPath = path.join(__dirname,'../../dist/mean-ng6');
 
 var app = express();
@@ -25,13 +26,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
-console.log('Static Path', staticPath);
 //To load Angular App bundles and static files
 app.use(express.static(staticPath));
 //reference to index.html
 app.use('/', express.static(staticPath));
 //Handle Node Api
-app.use('/api', apiRouter);
+app.use('/api/books', booksRouter);
 
 //catch errors
 app.use(function(req,res,next){

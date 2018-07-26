@@ -1,46 +1,20 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-var bookModel = require('../models/book.js');
+var booksController = require('../controllers/books.js');
 
 /* GET ALL BOOKS */
-router.get('/', function(req, res, next) {
-    bookModel.find(function (err, products) {
-      if (err) return next(err);
-      res.json(products);
-    });
-  });
+router.get('/', booksController.getAll);
   
-  /* GET SINGLE BOOK BY ID */
-  router.get('/:id', function(req, res, next) {
-    bookModel.findById(req.params.id, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
-    });
-  });
+/* GET SINGLE BOOK BY ID */
+router.get('/:id', booksController.getBookById);
   
-  /* SAVE BOOK */
-  router.post('/', function(req, res, next) {
-    bookModel.create(req.body, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
-    });
-  });
+/* SAVE BOOK */
+router.post('/', booksController.saveBook);
   
-  /* UPDATE BOOK */
-  router.put('/:id', function(req, res, next) {
-    bookModel.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
-    });
-  });
-  
-  /* DELETE BOOK */
-  router.delete('/:id', function(req, res, next) {
-    bookModel.findByIdAndRemove(req.params.id, req.body, function (err, post) {
-      if (err) return next(err);
-      res.json(post);
-    });
-  });
+/* UPDATE BOOK */
+router.put('/:id', booksController.updateBook);
+
+/* DELETE BOOK */
+router.delete('/:id', booksController.deleteBook);
 
 module.exports = router;
