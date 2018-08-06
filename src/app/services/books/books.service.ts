@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { catchError, tap, map } from 'rxjs/operators';
 
 const apiUrl = "/api/books";
+
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
