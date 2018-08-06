@@ -1,5 +1,5 @@
 <mat-toolbar class="toolbar">
     <span class="example-spacer"></span>
     <button mat-button mat-raised-button color="primary" *ngIf="!auth.isAuthenticated()" (click)="auth.login()"><mat-icon>person</mat-icon>Login</button>
-    <button mat-button mat-raised-button (click)="auth.logout()"><mat-icon>exit_to_app</mat-icon>Logout</button>
+    <button mat-button mat-raised-button *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><mat-icon>exit_to_app</mat-icon>Logout</button>
 </mat-toolbar>
