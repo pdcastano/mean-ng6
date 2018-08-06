@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 import * as auth0 from 'auth0-js';
 
 @Injectable()
 export class AuthService {
 
     auth0 = new auth0.WebAuth({
-        clientID: 'dsOPFnFu66xd5q0bdomQgGU8KyRNvonW',
-        domain: 'pdcastano.auth0.com',
+        clientID: environment.auth0ClientID,
+        domain: environment.auth0Domain,
         responseType: 'token id_token',
-        audience: 'https://pdcastano.auth0.com/userinfo',
-        redirectUri: 'http://localhost:3000',//'http://localhost:3000/books',
+        audience: environment.auth0Audience,
+        redirectUri: environment.auth0RedirectUri,
         scope: 'openid'
     });
 

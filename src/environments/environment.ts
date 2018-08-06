@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  auth0ClientID: 'dsOPFnFu66xd5q0bdomQgGU8KyRNvonW',
+  auth0Domain: 'pdcastano.auth0.com',
+  auth0Audience: 'https://pdcastano.auth0.com/userinfo',
+  auth0RedirectUri: 'http://localhost:3000/'
 };
 
 /*
