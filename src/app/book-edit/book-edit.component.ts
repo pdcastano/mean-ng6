@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BooksService } from '../services/books/books.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
 
 @Component({
   selector: 'app-book-edit',
@@ -18,6 +19,7 @@ export class BookEditComponent implements OnInit {
   author:string = '';
   publisher:string = '';
   published_year:string = '';
+  matcher:ErrorStateMatcher= new ErrorStateMatcher();
 
   constructor(
     private router: Router, 
