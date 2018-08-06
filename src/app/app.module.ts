@@ -14,6 +14,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule } from "@angular/material";
+import { ErrorStateMatcher } from '@angular/material/core';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
@@ -79,7 +80,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ErrorStateMatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
