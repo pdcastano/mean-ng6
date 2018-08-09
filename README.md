@@ -8,7 +8,7 @@ Run `ng serve` / `npm run start-app` for a dev server. Navigate to `http://local
 
 Run `npm run start-api` for a dev api test. Navigate to `http://localhost:3000/api`.
 
-Run `npm run start` for a run full mean app. Navigate to `http://localhost:3000/`. 
+Run `npm run start-dev` for run full mean app. Navigate to `http://localhost:3000/`. 
 
 ## Code scaffolding
 
@@ -17,6 +17,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Deployment on Heroku
+
+Run `npm run start` for run Node.js server and set `postinstall` script to build angular app.
 
 ## Running unit tests
 
