@@ -1,6 +1,9 @@
 {
   "name": "mean-ng6",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.11.1"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng build --prod && node ./src/bin/www",

@@ -16,7 +16,7 @@ var server = http.createServer(app);
 /**
  * Listen on provider port
  */
-server.listen(port);
+server.listen(port, '0.0.0.0');
 server.on('error',onError);
 server.on('listening',onListening);
 
