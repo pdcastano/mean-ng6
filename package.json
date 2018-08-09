@@ -6,7 +6,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod && node ./src/bin/www",
+    "start": "node ./src/bin/www",
+    "postinstall": "ng build --prod",
     "start-dev": "ng build && node ./src/bin/www",
     "start-app": "ng serve",
     "start-api": "node ./src/bin/www",

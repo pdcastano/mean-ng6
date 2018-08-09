@@ -5,7 +5,7 @@ var http = require('http');
 /**
  * Get port from environment and save it in express app
  */
-var port = process.env.PORT || '3000';
+var port = process.env.PORT || 3000;
 app.set('port', port);
 
 /**
