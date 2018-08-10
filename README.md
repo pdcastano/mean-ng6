@@ -1,10 +1,10 @@
 # MeanNg6
 
 This project was generated with: 
-[Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-[ngBootstrap](https://ng-bootstrap.github.io) version 2.2.2.
-[Bootstrap](https://getbootstrap.com/) version 4.
-[FontAwesome](https://fontawesome.com/) version 5.2.
+[Angular CLI](https://github.com/angular/angular-cli) version 6.0.8,
+[ngBootstrap](https://ng-bootstrap.github.io) version 2.2.2,
+[Bootstrap](https://getbootstrap.com/) version 4,
+[FontAwesome](https://fontawesome.com/) version 5.2 and
 [Auth0](https://auth0.com/)
 
 [Node.js](https://nodejs.org) and [Express](http://expressjs.com)
