@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { BooksService } from '../services/books/books.service';
 import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+
+import { 
+  faEye,
+  faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-book-edit',
@@ -10,7 +13,10 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./book-edit.component.css']
 })
 export class BookEditComponent implements OnInit {
-
+  //fa-icons
+  faEye = faEye;
+  faSave = faSave;
+  
   bookForm: FormGroup;
   id:string = '';
   isbn:string = '';
@@ -19,7 +25,6 @@ export class BookEditComponent implements OnInit {
   author:string = '';
   publisher:string = '';
   published_year:string = '';
-  matcher:ErrorStateMatcher= new ErrorStateMatcher();
 
   constructor(
     private router: Router, 

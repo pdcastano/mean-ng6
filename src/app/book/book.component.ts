@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs';
 import { BooksService } from '../services/books/books.service';
+import { 
+  faPlus,
+  faEye } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-book',
@@ -10,11 +12,12 @@ import { BooksService } from '../services/books/books.service';
 })
 export class BookComponent implements OnInit {
   
-  books:any;
-  //Angular Material datasource variables
-  displayedColumns = ['isbn', 'title', 'author'];
-  dataSource = new BookDataSource(this.api);
+  //fa-icons definition
+  faPlus = faPlus;
+  faEye = faEye;
 
+  books:any;
+  
   constructor(private api:BooksService) { }
   
   ngOnInit() {
@@ -27,19 +30,4 @@ export class BookComponent implements OnInit {
       });
   }
 
-}
-
-//Angular Material Data Source 
-export class BookDataSource extends DataSource<any> {
-  constructor(private api: BooksService) {
-    super()
-  }
-
-  connect() {
-    return this.api.getBooks();
-  }
-
-  disconnect() {
-
-  }
 }

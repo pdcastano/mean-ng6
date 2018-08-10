@@ -8,7 +8,10 @@ import {
   FormGroup, 
   NgForm, 
   Validators } from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+
+import { 
+  faBars,
+  faSave } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-book-create',
@@ -17,6 +20,10 @@ import {ErrorStateMatcher} from '@angular/material/core';
 })
 export class BookCreateComponent implements OnInit {
 
+  //fa-icons
+  faBars = faBars;
+  faSave = faSave;
+
   bookForm: FormGroup;
   isbn:string='';
   title:string='';
@@ -24,7 +31,6 @@ export class BookCreateComponent implements OnInit {
   author:string='';
   publisher:string='';
   published_year:string='';
-  matcher:ErrorStateMatcher= new ErrorStateMatcher();
 
   constructor(
     private router: Router, 

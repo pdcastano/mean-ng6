@@ -3,29 +3,26 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import {
-  MatInputModule,
-  MatPaginatorModule,
-  MatProgressSpinnerModule,
-  MatSortModule,
-  MatTableModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatButtonModule,
-  MatCardModule,
-  MatFormFieldModule } from "@angular/material";
-import { ErrorStateMatcher } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HomeComponent } from './home/home.component';
 
 
 const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: { title: 'Home'}
+  },
   {
     path: 'books',
     component: BookComponent,
@@ -47,8 +44,12 @@ const appRoutes: Routes = [
     data: { title: 'Book edit'}
   },
   {
+    path: '*',
+    redirectTo: '/books'
+  },
+  {
     path: '',
-    redirectTo: '/books',
+    redirectTo: '/home',
     pathMatch: 'full'
   }
 ];
@@ -60,7 +61,8 @@ const appRoutes: Routes = [
     BookDetailComponent,
     BookCreateComponent,
     BookEditComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    HomeComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -68,19 +70,11 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatSortModule,
-    MatTableModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule.forRoot(),
+    FontAwesomeModule
   ],
-  providers: [ErrorStateMatcher],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

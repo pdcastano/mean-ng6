@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
 
+import { 
+  faUser,
+  faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'toolbar',
   templateUrl: './toolbar.component.html',
@@ -9,6 +13,10 @@ import { AuthService } from '../services/auth/auth.service';
 })
 export class ToolbarComponent implements OnInit {
 
+  //fa-icons definition
+  faUser = faUser;
+  faSignOutAlt = faSignOutAlt;
+  
   constructor(private auth:AuthService) { }
 
   ngOnInit() {}

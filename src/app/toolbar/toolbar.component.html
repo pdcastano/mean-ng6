@@ -1,5 +1,5 @@
-<mat-toolbar class="toolbar">
-    <span class="example-spacer"></span>
-    <button mat-button mat-raised-button color="primary" *ngIf="!isAuthenticated()" (click)="login()"><mat-icon>person</mat-icon>Login</button>
-    <button mat-button mat-raised-button *ngIf="isAuthenticated()" (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout</button>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <span class="navbar-brand">Mean-ng6 app</span>
+    <button class="btn btn-primary mr-lg-0 mx-auto" *ngIf="!isAuthenticated()" (click)="login()"><fa-icon [icon]="faUser"></fa-icon> Login </button>
+    <button class="btn mr-lg-0 mx-auto" *ngIf="isAuthenticated()" (click)="logout()"><fa-icon [icon]="faSignOutAlt"></fa-icon> Logout </button>
+</nav>

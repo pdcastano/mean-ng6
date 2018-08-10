@@ -1,27 +1,32 @@
-<div class="button-row">
-  <a mat-raised-button color="primary" [routerLink]="['/books']"><mat-icon>list</mat-icon></a>
+<div class="container">
+  <div class="row mb-sm-2">
+    <div class="col-sm">
+      <button class="btn btn-primary" [routerLink]="['/books']"><fa-icon [icon]="faBars"></fa-icon> List</button>
+    </div>  
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title"><h2>{{book.title}}</h2></div>
+      <div class="card-subtitle text-muted">{{book.description}}</div>
+    </div>
+    <div class="card-body">
+      <dl>
+        <dt>ISBN:</dt>
+        <dd>{{book.isbn}}</dd>
+        <dt>Author:</dt>
+        <dd>{{book.author}}</dd>
+        <dt>Publisher:</dt>
+        <dd>{{book.publisher}}</dd>
+        <dt>Publish Year:</dt>
+        <dd>{{book.published_year}}</dd>
+        <dt>Update Date:</dt>
+        <dd>{{book.updated_date | date}}</dd>
+      </dl>
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-primary" [routerLink]="['/book-edit', book._id]"><fa-icon [icon]="faPencilAlt"></fa-icon> Edit</button>
+      <button class="btn btn-danger ml-sm-2" (click)="deleteBook(book._id)"><fa-icon [icon]="faTrashAlt"></fa-icon> Delete</button>
+    </div>
+  </div>
 </div>
-<mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title><h2>{{book.title}}</h2></mat-card-title>
-    <mat-card-subtitle>{{book.description}}</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <dl>
-      <dt>ISBN:</dt>
-      <dd>{{book.isbn}}</dd>
-      <dt>Author:</dt>
-      <dd>{{book.author}}</dd>
-      <dt>Publisher:</dt>
-      <dd>{{book.publisher}}</dd>
-      <dt>Publish Year:</dt>
-      <dd>{{book.published_year}}</dd>
-      <dt>Update Date:</dt>
-      <dd>{{book.updated_date | date}}</dd>
-    </dl>
-  </mat-card-content>
-  <mat-card-actions>
-    <a mat-raised-button color="primary" [routerLink]="['/book-edit', book._id]"><mat-icon>edit</mat-icon></a>
-    <a mat-raised-button color="warn" (click)="deleteBook(book._id)"><mat-icon>delete</mat-icon></a>
-  </mat-card-actions>
-</mat-card>
+
