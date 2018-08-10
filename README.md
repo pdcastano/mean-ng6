@@ -1,6 +1,20 @@
 # MeanNg6
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project was generated with: 
+[Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+[ngBootstrap](https://ng-bootstrap.github.io) version 2.2.2.
+[Bootstrap](https://getbootstrap.com/) version 4.
+[FontAwesome](https://fontawesome.com/) version 5.2.
+[Auth0](https://auth0.com/)
+
+[Node.js](https://nodejs.org) and [Express](http://expressjs.com)
+[Mlab MongoDb](https://mlab.com/)
+
+Deployed on [Heroku](https://heroku.com/)
+
+## Deployment on Heroku
+
+Run `npm run start` for run Node.js server and set `postinstall` script to build angular app.
 
 ## Development server
 
@@ -17,10 +31,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Deployment on Heroku
-
-Run `npm run start` for run Node.js server and set `postinstall` script to build angular app.
 
 ## Running unit tests
 
